@@ -1,14 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import Count from './components/Count';
-import Count5 from './components/Count5';
+import FunctionalComponent from './components/FunctionalComponent';
+import ClassComponent from './components/ClassComponent';
 
 function App() {
   return (
     <div className="App">
-      <Count/>
-
-      <Count5/>
+      <FunctionalComponent name="Bruce" heroName="Batman"/>
+      <ClassComponent name="Diana" heroName="Wonder Woman"/>
     </div>
   );
 }
