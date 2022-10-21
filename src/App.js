@@ -1,13 +1,13 @@
 import logo from './logo.svg';
 import './App.css';
-import FunctionalComponent from './components/FunctionalComponent';
-import ClassComponent from './components/ClassComponent';
+import FunctionClick from './components/FunctionClick';
+import ClassClick from './components/ClassClick';
 
 function App() {
   return (
     <div className="App">
-      <FunctionalComponent name="Bruce" heroName="Batman"/>
-      <ClassComponent name="Diana" heroName="Wonder Woman"/>
+      <FunctionClick/>
+      <ClassClick/>
     </div>
   );
 }
