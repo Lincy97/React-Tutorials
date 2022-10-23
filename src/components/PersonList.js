@@ -24,8 +24,7 @@ function NameList() {
         }
     ]
     const personList = persons.map( person => (
-        // <h2>I am {person.name}, {person.age} years old, I know {person.skill}  </h2>
-        <Person person={person} /> // Passing the person as a prop to the Person Component
+        <Person key={person.id} person={person} /> // Passing the person as a prop to the Person Component
     ))
 
     return <div>{personList}</div>
