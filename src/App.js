@@ -1,14 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
-import NameList from './components/NameList';
-import PersonList from './components/PersonList'
+import Stylesheet from './components/Stylesheet';
+import Inline from './components/Inline';
 
 
 function App() {
   return (
     <div className="App">
-      <NameList/>
-      <PersonList/>
+      <Stylesheet primary={true}/>
+      <Inline />
     </div>
   );
 }
