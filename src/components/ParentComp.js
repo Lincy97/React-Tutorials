@@ -14,7 +14,7 @@ class ParentComp extends Component {
 
     // every 2 seconds, the setState method is called which will rerender the parent component
     // and if the parent component rerender, the child component will also rerender (unless return false from shouldComponentUpdate )
-    // Regular Comp will rerender, but the Pure Comp is never rerender
+    // In this case, every 2 seconds Regular Comp will rerender, but the Pure Comp is never rerender
     componentDidMount() {
         setInterval( () => {
             this.setState({
