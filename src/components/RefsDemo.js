@@ -9,11 +9,21 @@ class RefsDemo extends Component {
         // assign React.createRef to this property
         // *common to create refs in the constructor so that can be referenced throughout the component
         this.inputRef = React.createRef()
+        
+        this.cbRef = null
+        this.setCbRef = element => {
+            this.cbRef = element
+        }
     }
 
     componentDidMount() {
-        this.inputRef.current.focus()
-        console.log(this.inputRef)
+        // this.inputRef.current.focus()
+        // console.log(this.inputRef)
+
+        if(this.cbRef) {
+            // the Dom node is directly accessed using the ref property => not need .current
+            this.cbRef.focus()
+        }
     }
 
     clickHandler = () => {
@@ -25,6 +35,7 @@ class RefsDemo extends Component {
         return(
             <div>
                 <input type='text' ref={this.inputRef} />
+                <input type='text' ref={this.setCbRef} />
                 <button onClick={this.clickHandler}>Click</button>
             </div>
         )
