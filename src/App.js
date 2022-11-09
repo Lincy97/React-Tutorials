@@ -1,14 +1,30 @@
 import logo from './logo.svg';
 import './App.css';
-import PortalDemo from './components/PortalDemo';
-import Modal from './components/Modal';
-
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
 
 function App() {
   return (
     <div className="App">
-      <PortalDemo />
-      <Modal />
+      {/* <Hero heroName="Batman" />
+      <Hero heroName="Superman" />
+      <Hero heroName="Joker" /> */}
+
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman" />
+        <Hero heroName="Superman" />
+        <Hero heroName="Joker" />
+      </ErrorBoundary> */}
+
+      <ErrorBoundary>
+        <Hero heroName="Batman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Superman" />
+      </ErrorBoundary>
+      <ErrorBoundary>
+        <Hero heroName="Joker" />
+      </ErrorBoundary>
     </div>
   );
 }
